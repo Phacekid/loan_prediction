@@ -24,57 +24,58 @@ st.title('Loan Prediction using ML')
 st.image('loan.webp')
 st.divider() 
 # getting the input data from the user
-colu1, colu2, colu3, colu4, colu5 = st.columns(5)
-col1, col2, col3, col4, col5, col6 = st.columns(6)
-
-with colu1:
+col1, col2, col3, col4, col5 = st.columns(5)
+colu1, colu2, colu3, colu4, colu5, colu6 = st.columns(6)
+colum1, colum2, colum3, colum4, colum5, colum6 = st.columns(6)
+column1, column2, column3, column4, column5, column6 = st.columns(6)
+with col1:
     LIMIT_BAL = st.number_input('**:blue[LIMIT BALANCE]**', value=0)
-with colu2:
+with col2:
     SEX = st.selectbox('**:blue[SEX]**', ['Male', 'Female'])
-with colu3:
+with col3:
     DOB = st.date_input('**:blue[DOB]**')
-with colu4:
+with col4:
     EDUCATION = st.selectbox('**:blue[EDUCATION]**', ['Uneducated', 'Undergraduate', 'Graduate','Masters', 'Doctorate'])
-with colu5:
+with col5:
     MARRIAGE = st.selectbox('**:blue[MARRIAGE]**', ['Single','Married','Divorce'])
 
-with col1:
+with colu1:
     PAY_1 = st.number_input('**:blue[PAY 1]**', value=0, min_value=-2, max_value=8, step=1)
-with col2:
+with colu2:
     PAY_2 = st.number_input('**:blue[PAY 2]**', value=0, min_value=-2, max_value=8, step=1)
-with col3:
+with colu3:
     PAY_3 = st.number_input('**:blue[PAY 3]**', value=0, min_value=-2, max_value=8, step=1)
-with col4:
+with colu4:
     PAY_4 = st.number_input('**:blue[PAY 4]**', value=0, min_value=-2, max_value=8, step=1)
-with col5:
+with colu5:
     PAY_5 = st.number_input('**:blue[PAY 5]**', value=0, min_value=-2, max_value=8, step=1)
-with col6:
+with colu6:
     PAY_6 = st.number_input('**:blue[PAY 6]**', value=0, min_value=-2, max_value=8, step=1)
 
-with col1:
+with colum1:
     BILL_AMT1 = st.number_input('**:blue[BILL AMOUNT 1]**', value=0)
-with col2:
+with colum2:
     BILL_AMT2 = st.number_input('**:blue[BILL AMOUNT 2]**', value=0)
-with col3:
+with colum3:
     BILL_AMT3 = st.number_input('**:blue[BILL AMOUNT 3]**', value=0)
-with col4:
+with colum4:
     BILL_AMT4 = st.number_input('**:blue[BILL AMOUNT 4]**', value=0)
-with col5:
+with colum5:
     BILL_AMT5 = st.number_input('**:blue[BILL AMOUNT 5]**', value=0)
-with col6:
+with colum6:
     BILL_AMT6 = st.number_input('**:blue[BILL AMOUNT 6]**', value=0)
 
-with col1:
+with column1:
     PAY_AMT1 = st.number_input('**:blue[PAY AMOUNT 1]**', value=0)
-with col2:
+with column2:
     PAY_AMT2 = st.number_input('**:blue[PAY AMOUNT 2]**', value=0)
-with col3:
+with column3:
     PAY_AMT3 = st.number_input('**:blue[PAY AMOUNT 3]**', value=0)
-with col4:
+with column4:
     PAY_AMT4 = st.number_input('**:blue[PAY AMOUNT 4]**', value=0)
-with col5:
+with column5:
     PAY_AMT5 = st.number_input('**:blue[PAY AMOUNT 5]**', value=0)
-with col6:
+with column6:
     PAY_AMT6 = st.number_input('**:blue[PAY AMOUNT 6]**', value=0)
 
 #Data Preprocessing

@@ -137,11 +137,13 @@ def make_prediction(data):
     return prediction
     
 final_output = ""
-
+default_out = {0: "no default", 1:"default"}
 if st.button('**Predict Loan**'):
     output_prediction = make_prediction(data)
-    final_output = f"**:blue[The Loan is predicted to be {output_prediction}]**"
     with st.spinner('Predicting Loan...'):
         time.sleep(1)
-        st.success(final_output, icon="🎁")
+        if output_prediction == 0:
+            st.success('The Prediction indicates that customer will not default', icon="✅")
+        else:
+            st.success('The Prediction indicates that customer will default', icon="❌")
 st.divider()
